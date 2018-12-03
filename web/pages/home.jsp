@@ -10,13 +10,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../resources/img/logo-p.png">
+        <link rel="icon" href="resources/img/logo-p.png">
         <title>E-Vacina</title>
 
         <!--CSS PATH INICIO -->
-        <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../resources/css/style.css" rel="stylesheet">
-        <link href="../resources/css/modal.css" rel="stylesheet">
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+        <link href="resources/css/style.css" rel="stylesheet">
+        <link href="resources/css/modal.css" rel="stylesheet">
         <!--CSS PATH FIM -->
 
     </head>
@@ -32,8 +32,8 @@
             </button>
 
 
-            <a class="navbar-brand" href="/">
-                <img src="../resources/img/logo-topo2.png" alt="">
+            <a class="navbar-brand" href="<mtw:contextPath/>/">
+                <img src="resources/img/logo-topo2.png" alt="">
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -64,7 +64,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <a href="/login"><button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                    <a href="admin.mtw"  ><button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
                             <i class="fas fa-user-circle"></i> Login
                         </button></a>
                 </ul>
@@ -72,27 +72,11 @@
 
         </nav>
         <!--TOPO FIM -->
-
-
-        <mtw:form action="admin.inserirPaciente.mtw" method="post">
-            Inserir Paciente<br/>
-            SUS: 
-            <mtw:input type="text" name="sus" size="30" maxlength="30" /><br/>
-            NOME: 
-            <mtw:input type="text" name="nome" size="30" maxlength="30" /><br/>
-            SEXO: 
-            <mtw:input type="text" name="sexo" size="30" maxlength="30" /><br/>
-            NASCIMENTO: 
-            <mtw:input type="text" name="nascimento" size="30" maxlength="30" /><br/>
-            <input type="submit" value="Inserir" />
-        </mtw:form>
-
-
-
+        
         <!--JAVASCRIPT PATH INICIO -->
-        <script src="../resources/js/jquery.js"></script>
-        <script src="../resources/js/bootstrap.min.js"></script>
-        <script defer src="../resources/js/fontawesome-all.js"></script>
+        <script src="resources/js/jquery.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script defer src="resources/js/fontawesome-all.js"></script>
         <!--JAVASCRIPT PATH FIM -->
 
     </body>

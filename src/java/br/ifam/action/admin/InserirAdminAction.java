@@ -1,4 +1,4 @@
-package br.ifam.action;
+package br.ifam.action.admin;
  
 //import connection.ConnectionFactory;
 //import javax.persistence.EntityManager;
@@ -6,7 +6,7 @@ import br.ifam.dao.GenericoDAO;
 import br.ifam.modelo.Paciente;
 import org.mentawai.core.BaseAction;
  
-public class InserirAction extends BaseAction {
+public class InserirAdminAction extends BaseAction {
     
     public String inserirPaciente() {
         //recebe valores do formulario

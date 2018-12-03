@@ -50,12 +50,12 @@ Contributor(s):
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
 
+        <mapping class="br.ifam.modelo.Administrador"/>
         <mapping class="br.ifam.modelo.Atendente"/>
         <mapping class="br.ifam.modelo.Local"/>
         <mapping class="br.ifam.modelo.Paciente"/>
         <mapping class="br.ifam.modelo.Vacina"/>
         <mapping class="br.ifam.modelo.Vacinacao"/>
-        
         
     </session-factory>
 </hibernate-configuration>

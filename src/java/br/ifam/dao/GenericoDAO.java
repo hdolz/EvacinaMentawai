@@ -7,6 +7,7 @@ package br.ifam.dao;
 
 import br.ifam.util.HibernateUtil;
 import java.io.Serializable;
+import java.sql.ResultSet;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -84,4 +85,15 @@ public class GenericoDAO<T extends Serializable> {
         query.setParameter("param", "%"+procura+"%");
         return query.list();
     }
+    
+    public List<T> autenticar(Class<T> obj,String coluna1,String param1,String coluna2, String param2){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query = session.createQuery("Select t from "+obj.getTypeName()+" as t WHERE t."+coluna1+" = :param1 and "+
+                coluna2+" = :param2");
+        query.setParameter("param1", param1);
+        query.setParameter("param2", param2);
+        
+        return query.list();
+    }
+    
 }
