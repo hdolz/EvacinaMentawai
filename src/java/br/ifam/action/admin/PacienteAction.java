@@ -5,10 +5,20 @@
  */
 package br.ifam.action.admin;
 
+import org.mentawai.core.BaseAction;
+
 /**
  *
  * @author hdolz
  */
-public class PacienteAction {
+public class PacienteAction extends BaseAction{
+    
+    //exibir pacientes do banco
+    public String exibir(){
+        
+        
+        return SUCCESS;
+    }
+    
     
 }

@@ -5,14 +5,14 @@
  */
 package br.ifam.action.admin;
 
-import static org.mentawai.core.Action.SUCCESS;
+import org.mentawai.core.BaseAction;
 
 /**
  *
  * @author hdolz
  */
-public class AtendenteAction {
-    //exibir atendentes do banco
+public class LocalAction extends BaseAction{
+    //exibir locais do banco
     public String exibir(){
         
         

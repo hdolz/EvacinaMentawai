@@ -40,6 +40,7 @@ public class LoginAdminAction extends BaseLoginAction {
             System.out.println("USUARIO ENCONTRADO COM SUCESSO *******************");
             //define usuario na sessão
             setSessionObj(email);
+            output.setValue("userEmail", email);
             return SUCCESS;
         }
     }

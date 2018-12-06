@@ -3,7 +3,6 @@
 <mtw:requiresAuthentication />
 
 
-<%--<%@taglib prefix="s" uri="/struts-tags" %>--%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="resources/img/logo-p.png">
+        <link rel="icon" href="../resources/img/logo-p.png">
         <!-- Bootstrap css link externo -->
         <!--
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -21,9 +20,9 @@
         <title>E-Vacina</title>
 
         <!--CSS PATH INICIO -->
-        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-        <link href="resources/css/style.css" rel="stylesheet">
-        <link href="resources/css/upload-img-exibir.css.css" rel="stylesheet">
+        <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../resources/css/style.css" rel="stylesheet">
+        <link href="../resources/css/upload-img-exibir.css.css" rel="stylesheet">
         <!--CSS PATH FIM -->
 
         <!--  -->
@@ -40,7 +39,7 @@
 
 
             <a class="navbar-brand" href="<mtw:contextPath/>/">
-                <img src="resources/img/logo-topo.png"  alt="">
+                <img src="../resources/img/logo-topo.png"  alt="">
             </a>
 
             <div class="collapse navbar-collapse" id="">
@@ -96,18 +95,18 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="admin/paciente.exibir.mtw">
+                                <a class="nav-link text-secondary" href="<mtw:contextPath/>/admin/paciente.exibir.mtw">
                                     <i class="fas fa-users"></i>
                                     Pacientes
                                 </a>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="admin/vacina.exibir.mtw">
+                                <a class="nav-link text-secondary" href="<mtw:contextPath/>/admin/vacina.exibir.mtw">
                                     <i class="fas fa-syringe"></i>
                                     &nbspVacinas
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="admin/local.exibir.mtw">
+                                <a class="nav-link text-secondary" href="<mtw:contextPath/>/admin/local.exibir.mtw">
                                     <i class="far fa-hospital"></i>
                                     &nbspLocais de Vacina
                                 </a>
@@ -119,13 +118,13 @@
                             <%--</a>--%>
                             <%--</li>--%>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="admin/atendente.exibir.mtw">
+                                <a class="nav-link text-secondary" href="<mtw:contextPath/>/admin/atendente.exibir.mtw">
                                     <i class="fas fa-user-circle"></i>
                                     Atendente
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="home.mtw">
+                                <a class="nav-link text-secondary" href="<mtw:contextPath/>/home.mtw">
                                     <i class="fas fa-sign-out-alt"></i>
                                     Sair
                                 </a>
@@ -135,11 +134,47 @@
                 </nav>
                 <!--MENU LATERAL FIM -->
 
-
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Vacinas</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group mr-2">
 
 
+                                <form action="/pesquisaPaciente" method="get" class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" size="50" name="tfPesquisar" placeholder="Pesquisar vacinas" aria-label="Search" autofocus maxlength="120">
+                                    <button class="btn my-2 btn-outline-secondary my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+
+                                </form>
+                                <span>&nbsp</span><a class="btn btn-sm btn-outline-secondary" href="/pac_cadastrar">Novo Paciente</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome da Vacina</th>
+                                        <th>Descrição</th>
+                                        <th>Funções</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                <!-- LISTAR AQUI! -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </main>
+
+
+
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Bem Vindo !!</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
@@ -149,10 +184,10 @@
                 </div>
 
                 <!--JAVASCRIPT PATH INICIO -->
-                <script src="resources/js/jquery.js"></script>
-                <script src="resources/js/bootstrap.min.js"></script>
-                <script src="resources/js/upload-img-exibir.js"></script>
-                <script defer src="resources/js/fontawesome-all.js"></script>
+                <script src="../resources/js/jquery.js"></script>
+                <script src="../resources/js/bootstrap.min.js"></script>
+                <script src="../resources/js/upload-img-exibir.js"></script>
+                <script defer src="../resources/js/fontawesome-all.js"></script>
                 <!--JAVASCRIPT PATH FIM -->
 
                 <!-- Bootstrap js link externo -->

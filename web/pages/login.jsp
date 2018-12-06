@@ -19,24 +19,36 @@
         <!--CSS PATH FIM -->
     </head>
     <body>
-        
+
         <!-- Form de Login -->
-        <h2>LOGIN</h2>
-    <mtw:form action="login.mtw" method="post">
-        <div class="form-group">
-            <label>Email</label>
-            <mtw:input type="text" name="email" size="30" maxlength="30" />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>LOGIN</h2>
+                        </div>
+                        <div class="card-body">
+                            <mtw:form action="login.mtw" method="post">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <mtw:input type="text" name="email" size="30" maxlength="30" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Senha</label>
+                                    <mtw:input type="text" name="senha" size="30" maxlength="30" />
+                                </div>
+                                <button type="submit" class="btn btn-primary">Acessar</button>
+                            </mtw:form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
-        <div class="form-group">
-            <label>Senha</label>
-            <mtw:input type="text" name="senha" size="30" maxlength="30" />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </mtw:form>
 
 
-
-        
         <!--JAVASCRIPT PATH INICIO -->
         <script src="resources/js/jquery.js"></script>
         <script src="resources/js/bootstrap.min.js"></script>
