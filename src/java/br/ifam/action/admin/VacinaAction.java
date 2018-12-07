@@ -5,6 +5,11 @@
  */
 package br.ifam.action.admin;
 
+import br.ifam.dao.GenericoDAO;
+import br.ifam.modelo.Local;
+import br.ifam.modelo.Vacina;
+import java.util.List;
+import static org.mentawai.core.Action.SUCCESS;
 import org.mentawai.core.BaseAction;
 
 /**
@@ -13,10 +18,36 @@ import org.mentawai.core.BaseAction;
  */
 public class VacinaAction extends BaseAction {
     
-    //exibir vacinas do banco
-    public String exibir(){
-        
-        
+    //exibir pacientes do banco
+    public String exibir() {
+        output.setValue("listaVacinas", getVacinas());
+        return SUCCESS;
+    }
+    
+    public List<Vacina> getVacinas(){
+        GenericoDAO<Vacina> dao = new GenericoDAO<>();
+        List<Vacina> vacinas = dao.findAll(Vacina.class);
+        return vacinas;
+    }
+
+    public String cadastrar() {
+        return SUCCESS;
+    }
+    
+    public String inserir() {
+        //recebe valores do formulario
+        String nome = input.getString("nome");
+        String descricao = input.getString("descricao");
+        String lote = input.getString("lote");
+
+        //salvar no banco usando generic DAO
+        GenericoDAO<Vacina> dao = new GenericoDAO<>();
+        Vacina vacina = new Vacina(nome, descricao,lote);
+        dao.save(vacina);
+
+        //passar nova lista para a view redirecionada
+        output.setValue("listaVacinas", getVacinas());
+
         return SUCCESS;
     }
     

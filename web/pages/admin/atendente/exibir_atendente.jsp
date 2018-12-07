@@ -146,7 +146,8 @@
                                     <button class="btn my-2 btn-outline-secondary my-sm-0" type="submit"><i class="fas fa-search"></i></button>
 
                                 </form>
-                                <span>&nbsp</span><a class="btn btn-sm btn-outline-secondary" href="/pac_cadastrar">Novo Paciente</a>
+                                <span>&nbsp</span>
+                                <a class="btn btn-sm btn-outline-secondary" href="<mtw:contextPath/>/admin/atendente.cadastrar.mtw">Novo Atendente</a>
 
                             </div>
                         </div>
@@ -166,6 +167,23 @@
 
                                 <tbody>
                                    <!-- LISTAR AQUI! -->
+                                    <mtw:list value="listaAtendentes">
+                                        <mtw:isEmpty>
+                                            Você não possui ninguém na sua lista!
+                                        </mtw:isEmpty>
+                                        <mtw:loop var="a">
+                                            <tr>
+                                                <td><mtw:out value="a.id"/></td>
+                                                <td><mtw:out value="a.nome"/></td>
+                                                <td><mtw:out value="a.senha"/></td>
+                                                <td>
+                                                    <a type="button" class="btn btn-outline-info btn-sm" href="/paciente/${paciente.sus}"><i class="fas fa-edit"></i></a>
+                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="/delPaciente?sus=${paciente.sus}"><i class="fas fa-trash-alt"></i></a>
+                                                </td>
+                                            </tr>
+                                        </mtw:loop>
+
+                                    </mtw:list>
                                 
                                 </tbody>
                             </table>

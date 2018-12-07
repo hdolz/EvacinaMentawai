@@ -154,42 +154,26 @@
                         </div>
                     </div>
                     <div>
+                        <mtw:form action="admin/paciente.inserir.mtw" method="post">
+                            <div class="form-group">
+                                <label>Nº SUS</label>
+                                <mtw:input type="text" name="sus" size="30" maxlength="30" />
+                            </div>
+                            <div class="form-group">
+                                <label>Paciente</label>
+                                <mtw:input type="text" name="nome" size="30" maxlength="30" />
+                            </div>
+                            <div class="form-group">
+                                <label>Sexo</label>
+                                <mtw:input type="text" name="sexo" size="30" maxlength="30" />
+                            </div>
+                            <div class="form-group">
+                                <label>Nascimento</label>
+                                <mtw:input type="text" name="nascimento" size="30" maxlength="30" />
+                            </div>
 
-                        <div class="table-responsive">
-                            <table class="table table-striped table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>Nº do SUS</th>
-                                        <th>Nome do Paciente</th>
-                                        <th>Sexo</th>
-                                        <th>Data de Nascimento</th>
-                                        <th>Funções</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <!-- LISTAR AQUI! -->
-                                    <mtw:list value="listaPacientes">
-                                        <mtw:isEmpty>
-                                            Você não possui ninguém na sua lista!
-                                        </mtw:isEmpty>
-                                        <mtw:loop var="p">
-                                            <tr>
-                                                <td><mtw:out value="p.sus"/></td>
-                                                <td><mtw:out value="p.nome"/></td>
-                                                <td><mtw:out value="p.sexo"/></td>
-                                                <td><mtw:out value="p.nascimento"/></td>
-                                                <td>
-                                                    <a type="button" class="btn btn-outline-info btn-sm" href="/paciente/${paciente.sus}"><i class="fas fa-edit"></i></a>
-                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="/delPaciente?sus=${paciente.sus}"><i class="fas fa-trash-alt"></i></a>
-                                                </td>
-                                            </tr>
-                                        </mtw:loop>
-
-                                    </mtw:list>
-                                </tbody>
-                            </table>
-                        </div>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </mtw:form>
                     </div>
                 </main>
 
@@ -203,42 +187,6 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Cadastrar paciente</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <mtw:form action="admin/paciente.exibir.mtw" method="post">
-                                    <div class="form-group">
-                                        <label>Nº SUS</label>
-                                        <mtw:input type="text" name="sus" size="30" maxlength="30" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Paciente</label>
-                                        <mtw:input type="text" name="nome" size="30" maxlength="30" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Sexo</label>
-                                        <mtw:input type="text" name="sexo" size="30" maxlength="30" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Nascimento</label>
-                                        <mtw:input type="text" name="nascimento" size="30" maxlength="30" />
-                                    </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Salvar</button>
-                                </mtw:form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!--JAVASCRIPT PATH INICIO -->
                 <script src="../resources/js/jquery.js"></script>

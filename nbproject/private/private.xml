@@ -4,15 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/manager/AppManager.java</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/local/exibir_local.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/action/admin/AtendenteAction.java</file>
             <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/paciente/exibir_paciente.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/action/admin/LoginAdminAction.java</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/home.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/atendente/exibir_atendente.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/admin.jsp</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/paciente/cadastrar_paciente.jsp</file>
             <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/action/admin/PacienteAction.java</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/vacina/exibir_vacina.jsp</file>
         </group>
     </open-files>
 </project-private>
