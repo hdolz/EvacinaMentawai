@@ -20,6 +20,13 @@ public class Local implements Serializable {
         this.cidade = cidade;
         this.uf = uf;
     }
+    
+    public Local(long id, String nome, String cidade, String uf) {
+        this.id = id;
+        this.nome = nome;
+        this.cidade = cidade;
+        this.uf = uf;
+    }
 
     public Local() {
     }

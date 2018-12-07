@@ -48,4 +48,41 @@ public class LocalAction extends BaseAction{
 
         return SUCCESS;
     }
+    
+    public String editar_form(){
+        Long id = input.getLong("id");
+        GenericoDAO<Local> dao = new GenericoDAO<>();
+        Local local = dao.findById(Local.class,id);
+        output.setValue("id", local.getId());
+        output.setValue("nome", local.getNome());
+        output.setValue("cidade", local.getCidade());
+        output.setValue("uf", local.getUf());
+        return SUCCESS;
+    }
+    
+    public String editar(){
+        //recebe valores do formulario
+        Long id = input.getLong("id");
+        String nome = input.getString("nome");
+        String cidade = input.getString("cidade");
+        String uf = input.getString("uf");
+
+        //salvar no banco usando generic DAO
+        GenericoDAO<Local> dao = new GenericoDAO<>();
+        Local local = new Local(id, nome, cidade,uf);
+        dao.update(local);
+
+        //passar nova lista para a view redirecionada
+        output.setValue("listaLocais", getLocais());
+        
+        return SUCCESS;
+    }
+    
+    public String deletar(){
+        Long id = input.getLong("id");
+        GenericoDAO<Local> dao = new GenericoDAO<>();
+        dao.remove(Local.class,id);
+        output.setValue("listaLocais", getLocais());
+        return SUCCESS;
+    }
 }

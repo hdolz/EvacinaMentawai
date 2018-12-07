@@ -177,8 +177,8 @@
                                                 <td><mtw:out value="a.nome"/></td>
                                                 <td><mtw:out value="a.senha"/></td>
                                                 <td>
-                                                    <a type="button" class="btn btn-outline-info btn-sm" href="/paciente/${paciente.sus}"><i class="fas fa-edit"></i></a>
-                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="/delPaciente?sus=${paciente.sus}"><i class="fas fa-trash-alt"></i></a>
+                                                    <a type="button" class="btn btn-outline-info btn-sm" href="<mtw:contextPath/>/admin/atendente.editar_form.mtw?id=<mtw:out value="a.id"/>"><i class="fas fa-edit"></i></a>
+                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="<mtw:contextPath/>/admin/atendente.deletar.mtw?id=<mtw:out value="a.id"/>"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                             </tr>
                                         </mtw:loop>

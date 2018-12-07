@@ -178,8 +178,8 @@
                                                 <td><mtw:out value="l.cidade"/></td>
                                                 <td><mtw:out value="l.uf"/></td>
                                                 <td>
-                                                    <a type="button" class="btn btn-outline-info btn-sm" href="/paciente/${paciente.sus}"><i class="fas fa-edit"></i></a>
-                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="/delPaciente?sus=${paciente.sus}"><i class="fas fa-trash-alt"></i></a>
+                                                    <a type="button" class="btn btn-outline-info btn-sm" href="<mtw:contextPath/>/admin/local.editar_form.mtw?id=<mtw:out value="l.id"/>"><i class="fas fa-edit"></i></a>
+                                                    <a type="button" class="btn btn-outline-danger btn-sm" href="<mtw:contextPath/>/admin/local.deletar.mtw?id=<mtw:out value="l.id"/>"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                             </tr>
                                         </mtw:loop>

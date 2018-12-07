@@ -15,7 +15,6 @@ public class AppManager extends ApplicationManager {
 
     @Override
     public void loadFilters() {
-
         //define filtro global para autenticação de usuario
         filter(new AuthenticationFilter());
         on(LOGIN, fwd("pages/login.jsp"));
@@ -94,7 +93,48 @@ public class AppManager extends ApplicationManager {
         action("/admin/local", LocalAction.class,"inserir")
                 .on(SUCCESS, fwd("pages/admin/local/exibir_local.jsp"));
         
+        //****************************************************************************
+        //links para deletar - modulo Admin
+        action("/admin/paciente", PacienteAction.class,"deletar")
+                .on(SUCCESS, fwd("pages/admin/paciente/exibir_paciente.jsp"));
         
+        action("/admin/atendente", AtendenteAction.class,"deletar")
+                .on(SUCCESS, fwd("pages/admin/atendente/exibir_atendente.jsp"));
+        
+        action("/admin/vacina", VacinaAction.class,"deletar")
+                .on(SUCCESS, fwd("pages/admin/vacina/exibir_vacina.jsp"));
+        
+        action("/admin/local", LocalAction.class,"deletar")
+                .on(SUCCESS, fwd("pages/admin/local/exibir_local.jsp"));
+        //****************************************************************************
+        //links para formularios de edição - modulo Admin
+        action("/admin/paciente", PacienteAction.class,"editar_form")
+                .on(SUCCESS, fwd("pages/admin/paciente/editar_paciente.jsp"));
+        
+        //pagina editar atendente - modulo admin
+        action("/admin/atendente", AtendenteAction.class,"editar_form")
+                .on(SUCCESS, fwd("pages/admin/atendente/editar_atendente.jsp"));
+        
+        //pagina editar paciente - modulo admin
+        action("/admin/vacina", VacinaAction.class,"editar_form")
+                .on(SUCCESS, fwd("pages/admin/vacina/editar_vacina.jsp"));
+        
+        //pagina editar local - modulo admin
+        action("/admin/local", LocalAction.class,"editar_form")
+                .on(SUCCESS, fwd("pages/admin/local/editar_local.jsp"));
+        //***************************************************************************
+        //links para edição - modulo Admin
+        action("/admin/paciente", PacienteAction.class,"editar")
+                .on(SUCCESS, fwd("pages/admin/paciente/exibir_paciente.jsp"));
+        
+        action("/admin/atendente", AtendenteAction.class,"editar")
+                .on(SUCCESS, fwd("pages/admin/atendente/exibir_atendente.jsp"));
+        
+        action("/admin/vacina", VacinaAction.class,"editar")
+                .on(SUCCESS, fwd("pages/admin/vacina/exibir_vacina.jsp"));
+        
+        action("/admin/local", LocalAction.class,"editar")
+                .on(SUCCESS, fwd("pages/admin/local/exibir_local.jsp"));
         
     }
 

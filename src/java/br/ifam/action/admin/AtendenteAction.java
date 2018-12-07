@@ -48,4 +48,39 @@ public class AtendenteAction extends BaseAction {
 
         return SUCCESS;
     }
+    
+    public String editar_form(){
+        Long id = input.getLong("id");
+        GenericoDAO<Atendente> dao = new GenericoDAO<>();
+        Atendente atendente = dao.findById(Atendente.class,id);
+        output.setValue("id", atendente.getId());
+        output.setValue("nome", atendente.getNome());
+        output.setValue("senha", atendente.getSenha());
+        return SUCCESS;
+    }
+    
+    public String editar(){
+        //recebe valores do formulario
+        Long id = input.getLong("id");
+        String nome = input.getString("nome");
+        String senha = input.getString("senha");
+
+        //salvar no banco usando generic DAO
+        GenericoDAO<Atendente> dao = new GenericoDAO<>();
+        Atendente atendente = new Atendente(id, nome, senha);
+        dao.update(atendente);
+
+        //passar nova lista para a view redirecionada
+        output.setValue("listaAtendentes", getAtendentes());
+        
+        return SUCCESS;
+    }
+    
+    public String deletar(){
+        Long id = input.getLong("id");
+        GenericoDAO<Atendente> dao = new GenericoDAO<>();
+        dao.remove(Atendente.class,id);
+        output.setValue("listaAtendentes", getAtendentes());
+        return SUCCESS;
+    }
 }
