@@ -15,7 +15,7 @@ import org.mentawai.core.BaseAction;
  *
  * @author hdolz
  */
-public class LocalAction extends BaseAction{
+public class AdminLocalAction extends BaseAction{
     //exibir pacientes do banco
     public String exibir() {
         output.setValue("listaLocais", getLocais());

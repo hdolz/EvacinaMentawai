@@ -28,9 +28,9 @@ public class Paciente implements Serializable {
     private String nome;
     private String sexo;
     private String nascimento;
-    @OneToMany
-    @JoinColumn(name="sus")
-    private List<Vacinacao> vacinacao;
+//    @OneToMany
+//    @JoinColumn(name="sus")
+//    private List<Vacinacao> vacinacao;
 
 
     public Paciente() {
@@ -57,7 +57,7 @@ public class Paciente implements Serializable {
 		this.nome = nome;
 		this.sexo = sexo;
 		this.nascimento = nascimento;
-		this.vacinacao = vacinacao;
+//		this.vacinacao = vacinacao;
 	}
 
 	public long getSus() {

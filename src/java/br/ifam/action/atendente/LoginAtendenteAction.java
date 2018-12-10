@@ -3,24 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ifam.action.admin;
+package br.ifam.action.atendente;
 
 import br.ifam.dao.GenericoDAO;
-import br.ifam.modelo.Administrador;
+import br.ifam.modelo.Atendente;
+import br.ifam.modelo.Paciente;
 import java.util.List;
 import org.mentawai.action.BaseLoginAction;
+import static org.mentawai.core.Action.ERROR;
+import static org.mentawai.core.Action.SUCCESS;
 
 /**
  *
  * @author hdolz
  */
-public class LoginAdminAction extends BaseLoginAction {
-
-    public String admin() throws Exception {
-        String email = input.getString("email");
+public class LoginAtendenteAction extends BaseLoginAction{
+    
+    @Override
+    public String execute() throws Exception {
+        String nome = input.getString("nome");
         String senha = input.getString("senha");
          
-        if (email == null || email.trim().equals("")) {
+        if (nome == null || nome.trim().equals("")) {
             return ERROR;
         }
          
@@ -30,19 +34,19 @@ public class LoginAdminAction extends BaseLoginAction {
         
         //consulta no banco
         
-        GenericoDAO<Administrador> dao = new GenericoDAO<>();
+        GenericoDAO<Atendente> dao = new GenericoDAO<>();
         
-        List<Administrador> result = dao.autenticar(Administrador.class, "email", email, "senha", senha);
+        List<Atendente> result = dao.autenticar(Atendente.class, "nome", nome, "senha", senha);
         if(result.isEmpty()){
             System.out.println("USUARIO NAAAAOOOO  ENCONTRADO *******************");
             return ERROR;
         } else {
             System.out.println("USUARIO ENCONTRADO COM SUCESSO *******************");
             //define usuario na sessão
-            setSessionObj(email);
-            output.setValue("userEmail", email);
+            output.setValue("userEmail", nome);
+            setSessionObj(nome);
             return SUCCESS;
         }
     }
+    
 }
-

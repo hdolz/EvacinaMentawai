@@ -64,7 +64,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <a href="admin.mtw"  ><button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                    <a href="atendente.mtw"  ><button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
                             <i class="fas fa-user-circle"></i> Login
                         </button></a>
                 </ul>

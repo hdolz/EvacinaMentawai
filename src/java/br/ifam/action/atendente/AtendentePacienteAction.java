@@ -5,10 +5,12 @@
  */
 package br.ifam.action.atendente;
 
+import org.mentawai.core.BaseAction;
+
 /**
  *
  * @author hdolz
  */
-public class LoginAction {
+public class AtendentePacienteAction extends BaseAction{
     
 }

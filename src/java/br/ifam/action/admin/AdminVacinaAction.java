@@ -17,7 +17,7 @@ import org.mentawai.core.BaseAction;
  *
  * @author hdolz
  */
-public class VacinaAction extends BaseAction {
+public class AdminVacinaAction extends BaseAction {
     
     //exibir pacientes do banco
     public String exibir() {

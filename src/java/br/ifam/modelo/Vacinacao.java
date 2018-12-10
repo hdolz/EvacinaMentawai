@@ -17,15 +17,18 @@ public class Vacinacao implements Serializable {
 	private String dose;
 	@OneToOne
 	private Vacina vacina;
+        @OneToOne
+	private Paciente paciente;
 	
 	public Vacinacao() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Vacinacao(String data, String dose, Vacina vacina) {
+	public Vacinacao(String data, String dose, Vacina vacina,Paciente paciente) {
 		this.data = data;
 		this.dose =dose;
 		this.vacina = vacina;
+                this.paciente = paciente;
 	}
 	public Vacina getVacina() {
 		return vacina;

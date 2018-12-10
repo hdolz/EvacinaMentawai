@@ -14,7 +14,7 @@ import org.mentawai.core.BaseAction;
  *
  * @author hdolz
  */
-public class PacienteAction extends BaseAction {
+public class AdminPacienteAction extends BaseAction {
 
     //exibir pacientes do banco
     public String exibir() {

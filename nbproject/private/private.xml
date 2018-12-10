@@ -4,9 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/manager/AppManager.java</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/paciente/exibir_paciente.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/admin/paciente/cadastrar_paciente.jsp</file>
-            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/action/admin/PacienteAction.java</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/atendente/paciente_consultar.jsp</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/dao/GenericoDAO.java</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/action/atendente/AtendenteAction.java</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/web/pages/atendente/paciente_vacinar.jsp</file>
+            <file>file:/C:/Users/hdolz/Documents/NetBeansProjects/EVacinaMentawai/EvacinaMentawai/src/java/br/ifam/modelo/Vacinacao.java</file>
         </group>
     </open-files>
 </project-private>

@@ -30,10 +30,10 @@
                             <h2>LOGIN</h2>
                         </div>
                         <div class="card-body">
-                            <mtw:form action="login.mtw" method="post">
+                            <mtw:form action="login.admin.mtw" method="post">
                                 <div class="form-group">
-                                    <label>Nome</label>
-                                    <mtw:input type="text" name="nome" size="30" maxlength="30" />
+                                    <label>Email</label>
+                                    <mtw:input type="text" name="email" size="30" maxlength="30" />
                                 </div>
                                 <div class="form-group">
                                     <label>Senha</label>
